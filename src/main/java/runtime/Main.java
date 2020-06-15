@@ -1,7 +1,12 @@
+package runtime;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.IOException;
 
+/**
+ * Some runtime samples to handle runtime environment from within the application.
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
