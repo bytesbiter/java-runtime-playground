@@ -3,6 +3,7 @@ package classloader;
 /**
  * To test classloading please execute following command:
  * 1. java -verbose:class -classpath <asolute path to directory containing the compiled .class files of classloader directory> classloader.SampleLoader
+ *    Example: java -verbose:class -classpath /Users/roman/projects/java-runtime-playground/target/classes classloader.SampleLoader
  * 1.1 check verbose output containing the "Test!" printout
  * 2. Uncomment ClassA from below and rerun compilation as well as the java command from 1
  */
