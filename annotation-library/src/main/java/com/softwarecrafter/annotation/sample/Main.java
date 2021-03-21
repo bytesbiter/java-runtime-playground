@@ -1,4 +1,4 @@
-package annotations.retention.runtime.sample;
+package com.softwarecrafter.annotation.sample;
 
 public class Main {
 

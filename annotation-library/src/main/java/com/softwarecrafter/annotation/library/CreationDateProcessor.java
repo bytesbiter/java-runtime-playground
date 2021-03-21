@@ -1,4 +1,4 @@
-package annotations.retention.runtime.library;
+package com.softwarecrafter.annotation.library;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
@@ -10,7 +10,7 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 import java.util.Set;
 
-@SupportedAnnotationTypes("annotations.retention.runtime.library.CreationDate")
+@SupportedAnnotationTypes("com.softwarecrafter.annotation.library.CreationDate")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class CreationDateProcessor extends AbstractProcessor {
 

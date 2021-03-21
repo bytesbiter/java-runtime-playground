@@ -1,4 +1,4 @@
-package classloader;
+package com.softwarecrafter.classloader;
 
 public class ClassA {
 

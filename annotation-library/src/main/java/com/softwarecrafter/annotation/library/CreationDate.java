@@ -1,4 +1,4 @@
-package annotations.retention.runtime.library;
+package com.softwarecrafter.annotation.library;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
