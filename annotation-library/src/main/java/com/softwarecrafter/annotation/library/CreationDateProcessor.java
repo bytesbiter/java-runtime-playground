@@ -12,6 +12,7 @@ import java.util.Set;
 
 @SupportedAnnotationTypes("com.softwarecrafter.annotation.library.CreationDate")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
+//@AutoService(Processor.class)
 public class CreationDateProcessor extends AbstractProcessor {
 
     @Override
