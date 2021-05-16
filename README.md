@@ -24,3 +24,7 @@ Contains some samples to handle java runtime environment from within the running
 
 ### classloader-sample: 
 Contains an example of how the JVM handles classloading.
+
+## Links & Sources
+ - Java Runtime Class Tutorial: https://www.javatpoint.com/java-runtime-class
+ - JRE - Memory and Runtime Analysis: https://www.vogella.com/tutorials/JavaPerformance/article.html
