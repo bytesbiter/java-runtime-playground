@@ -27,3 +27,8 @@ Contains an example of how the JVM handles classloading.
 
 ### servlet-sample:
 Handcrafted servlet example.
+
+## Links & Sources
+ - Java Runtime Class Tutorial: https://www.javatpoint.com/java-runtime-class
+ - JRE - Memory and Runtime Analysis: https://www.vogella.com/tutorials/JavaPerformance/article.html
+ - JVM Explaination for Beginners: https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/
