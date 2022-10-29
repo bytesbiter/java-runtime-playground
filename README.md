@@ -24,3 +24,6 @@ Contains some samples to handle java runtime environment from within the running
 
 ### classloader-sample: 
 Contains an example of how the JVM handles classloading.
+
+### servlet-sample:
+Handcrafted servlet example.
