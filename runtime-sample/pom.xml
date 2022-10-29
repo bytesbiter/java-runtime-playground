@@ -5,14 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.software-crafter</groupId>
+        <groupId>io.bytesbiter</groupId>
         <artifactId>java-runtime-playground</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.software-crafter</groupId>
     <artifactId>runtime-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    
 </project>
