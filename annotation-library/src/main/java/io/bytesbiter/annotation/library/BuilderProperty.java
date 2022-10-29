@@ -1,4 +1,4 @@
-package com.softwarecrafter.annotation.library;
+package io.bytesbiter.annotation.library;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

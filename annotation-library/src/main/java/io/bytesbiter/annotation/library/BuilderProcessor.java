@@ -1,4 +1,4 @@
-package com.softwarecrafter.annotation.library;
+package io.bytesbiter.annotation.library;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@SupportedAnnotationTypes("com.softwarecrafter.annotation.library.BuilderProperty")
+@SupportedAnnotationTypes("io.bytesbiter.annotation.library.BuilderProperty")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 //@AutoService(Processor.class)
 public class BuilderProcessor extends AbstractProcessor {
