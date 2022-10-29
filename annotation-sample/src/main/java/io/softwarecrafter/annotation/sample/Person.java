@@ -1,8 +1,8 @@
-package com.softwarecrafter.annotation.sample;
+package io.softwarecrafter.annotation.sample;
 
 
-import com.softwarecrafter.annotation.library.BuilderProperty;
-import com.softwarecrafter.annotation.library.CreationDate;
+import io.bytesbiter.annotation.library.BuilderProperty;
+import io.bytesbiter.annotation.library.CreationDate;
 
 @CreationDate
 public class Person {

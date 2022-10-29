@@ -1,3 +1,5 @@
+package io.bytesbiter.servlet;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,10 +17,11 @@ public class CustomResponse {
     public void setRequest(CustomRequest request) {
         this.request = request;
     }
-    public void sendStaticResource() throws IOException {     byte[] bytes = new byte[BUFFER_SIZE];
+    public void sendStaticResource() throws IOException {
+        byte[] bytes = new byte[BUFFER_SIZE];
         FileInputStream fis = null;
         try {
-            File file = new File(CustomHttpServer.WEB_ROOT, request.getUri());
+            File file = new File(CustomHttpServer.WEB_ROOT);
             if (file.exists()) {
                 fis = new FileInputStream(file);
                 int ch = fis.read(bytes, 0, BUFFER_SIZE);

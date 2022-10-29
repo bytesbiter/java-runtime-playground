@@ -1,4 +1,4 @@
-package com.softwarecrafter.classloader;
+package io.bytesbiter.classloader;
 
 public class ClassA {
 

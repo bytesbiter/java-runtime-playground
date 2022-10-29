@@ -1,2 +1,2 @@
-com.softwarecrafter.annotation.library.CreationDateProcessor
-com.softwarecrafter.annotation.library.BuilderProcessor
+io.bytesbiter.annotation.library.CreationDateProcessor
+io.bytesbiter.annotation.library.BuilderProcessor

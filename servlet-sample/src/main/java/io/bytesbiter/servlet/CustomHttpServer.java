@@ -1,4 +1,4 @@
-import com.sun.net.httpserver.HttpServer;
+package io.bytesbiter.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +8,9 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ *  This class represents a webserver.
+ */
 public class CustomHttpServer {
 
     /** WEB_ROOT is the directory where our HTML and other files reside.
@@ -16,7 +19,7 @@ public class CustomHttpServer {
      * The working directory is the location in the file system
      * from where the java command was invoked.
      */
-    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "webroot";
+    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/resources/index.html";
     private static final String SHUTDOWN_COMMAND = "/shutdown";
     private boolean shutdown = false;
 

@@ -1,4 +1,6 @@
-package com.softwarecrafter.annotation.sample;
+package io.softwarecrafter.annotation.sample;
+
+import io.bytesbiter.annotation.sample.PersonBuilder;
 
 public class Main {
 
