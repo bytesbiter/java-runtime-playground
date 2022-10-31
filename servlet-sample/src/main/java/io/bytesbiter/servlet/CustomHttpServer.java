@@ -17,16 +17,17 @@ public class CustomHttpServer {
      * For this package, WEB_ROOT is the "webroot" directory under the
      * working directory.
      * The working directory is the location in the file system
-     * from where the java command was invoked.
+     * from where the java command was invoked (where the JVM is running - which is the root directory of this project 'java-runtime-playgoround' ).
      */
     public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/resources/index.html";
     private static final String SHUTDOWN_COMMAND = "/shutdown";
     private boolean shutdown = false;
 
     public void await() {
-        ServerSocket serverSocket = null; int port = 8080;
+        ServerSocket serverSocket = null;
+        int port = 8080;
         try {
-            serverSocket = new ServerSocket(port, 1, InetAddress.getByName("127.0.0.1"));
+            serverSocket = new ServerSocket(port, 1, InetAddress.getLoopbackAddress());
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);

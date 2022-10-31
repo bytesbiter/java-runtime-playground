@@ -1,4 +1,4 @@
-package com.softwarecrafter.annotation.library;
+package io.bytesbiter.annotation.library;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
@@ -10,7 +10,7 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 import java.util.Set;
 
-@SupportedAnnotationTypes("com.softwarecrafter.annotation.library.CreationDate")
+@SupportedAnnotationTypes("io.bytesbiter.annotation.library.CreationDate")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 //@AutoService(Processor.class)
 public class CreationDateProcessor extends AbstractProcessor {

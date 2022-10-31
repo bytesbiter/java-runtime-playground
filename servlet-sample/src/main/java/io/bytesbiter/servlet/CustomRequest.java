@@ -7,6 +7,7 @@ public class CustomRequest {
 
     private final InputStream input;
     private String uri;
+
     public CustomRequest(InputStream input) {
         this.input = input;
     }
