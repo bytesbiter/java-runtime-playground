@@ -19,7 +19,7 @@ public class CustomHttpServer {
      * The working directory is the location in the file system
      * from where the java command was invoked (where the JVM is running - which is the root directory of this project 'java-runtime-playgoround' ).
      */
-    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/resources/index.html";
+    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/resources";
     private static final String SHUTDOWN_COMMAND = "/shutdown";
     private boolean shutdown = false;
 
@@ -50,8 +50,8 @@ public class CustomHttpServer {
                 response.sendStaticResource();
                 // Close the socket socket.close();
                 //check if the previous URI is a shutdown command
-                shutdown = request.getUri().equals(SHUTDOWN_COMMAND); }
-            catch (Exception e) {
+                shutdown = request.getUri().equals(SHUTDOWN_COMMAND);
+            } catch (Exception e) {
                 e.printStackTrace ();
             }
         }
