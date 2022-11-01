@@ -1,14 +1,14 @@
-package io.bytesbiter.servlet;
+package io.bytesbiter.servlet.webserversample;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-public class CustomRequest {
+public class WebserverSampleRequest {
 
     private final InputStream input;
     private String uri;
 
-    public CustomRequest(InputStream input) {
+    public WebserverSampleRequest(InputStream input) {
         this.input = input;
     }
 

@@ -1,4 +1,4 @@
-package io.bytesbiter.servlet;
+package io.bytesbiter.servlet.webserversample;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.net.Socket;
 /**
  *  This class represents a webserver.
  */
-public class CustomHttpServer {
+public class WebserverSampleHttpServer {
 
     /** WEB_ROOT is the directory where our HTML and other files reside.
      * For this package, WEB_ROOT is the "webroot" directory under the
@@ -42,13 +42,14 @@ public class CustomHttpServer {
                 input = socket.getInputStream();
                 output = socket.getOutputStream();
                 // create Request object and parse
-                CustomRequest request = new CustomRequest(input);
+                WebserverSampleRequest request = new WebserverSampleRequest(input);
                 request.parse();
                 // create Response object
-                CustomResponse response = new CustomResponse(output);
+                WebserverSampleResponse response = new WebserverSampleResponse(output);
                 response.setRequest(request);
                 response.sendStaticResource();
-                // Close the socket socket.close();
+                // Close the socket
+                socket.close();
                 //check if the previous URI is a shutdown command
                 shutdown = request.getUri().equals(SHUTDOWN_COMMAND);
             } catch (Exception e) {

@@ -1,23 +1,23 @@
-package io.bytesbiter.servlet;
+package io.bytesbiter.servlet.webserversample;
 
 import java.io.*;
 
-public class CustomResponse {
+public class WebserverSampleResponse {
 
     private static final int BUFFER_SIZE = 1024;
-    CustomRequest request;
+    WebserverSampleRequest request;
     OutputStream output;
 
-    public CustomResponse(OutputStream output) {
+    public WebserverSampleResponse(OutputStream output) {
         this.output = output;
     }
-    public void setRequest(CustomRequest request) {
+    public void setRequest(WebserverSampleRequest request) {
         this.request = request;
     }
     public void sendStaticResource() {
 
         try {
-            File file = new File(CustomHttpServer.WEB_ROOT + request.getUri());
+            File file = new File(WebserverSampleHttpServer.WEB_ROOT + request.getUri());
             PrintWriter printWriter = new PrintWriter(output);
             BufferedReader reader = new BufferedReader(new FileReader(file));
 

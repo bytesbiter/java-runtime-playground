@@ -32,3 +32,4 @@ Handcrafted servlet example.
  - Java Runtime Class Tutorial: https://www.javatpoint.com/java-runtime-class
  - JRE - Memory and Runtime Analysis: https://www.vogella.com/tutorials/JavaPerformance/article.html
  - JVM Explaination for Beginners: https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/
+ - Servlets under the hood: https://l-webx.gitbooks.io/how_tomcat_works/content/index.html
