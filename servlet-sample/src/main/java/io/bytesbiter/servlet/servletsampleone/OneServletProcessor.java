@@ -20,7 +20,7 @@ public class OneServletProcessor {
             // create a URLClassLoader
             URL[] urls = new URL[1];
             URLStreamHandler streamHandler = null;
-            File classPath = new File(System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/java/io/bytesbiter/servlet/servletsampleone/");
+            File classPath = new File(OneHttpServer.WEB_ROOT + File.separator);
             // the forming of repository is taken from the createClassLoader method in org.apache.catalina.startup.ClassLoaderFactory
             String repository = (new URL("file", null, classPath.getCanonicalPath() + File.separator)).toString() ;
             // the code for forming the URL is taken from the addRepository method in org.apache.catalina.loader.StandardClassLoader.
@@ -32,8 +32,7 @@ public class OneServletProcessor {
 
         Class<OneServlet> servletClass = null;
         try {
-            servletClass = (Class<OneServlet>) Objects.requireNonNull(loader)
-                    .loadClass(servletName);
+            servletClass = (Class<OneServlet>) Objects.requireNonNull(loader).loadClass("io.bytesbiter.servlet.servletsampleone.OneServlet");
         } catch (ClassNotFoundException e) {
             System.out.println(e);
         }

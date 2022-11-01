@@ -8,12 +8,15 @@ import java.util.Locale;
 
 public class OneResponse implements ServletResponse {
 
+    PrintWriter printWriter;
+
     private static final int BUFFER_SIZE = 1024;
     OneRequest request;
     OutputStream output;
 
     public OneResponse(OutputStream output) {
         this.output = output;
+        this.printWriter = new PrintWriter(output);
     }
 
     public void setRequest(OneRequest request) {
@@ -23,8 +26,7 @@ public class OneResponse implements ServletResponse {
     public void sendStaticResource() {
 
         try {
-            File file = new File(OneHttpServer.WEB_ROOT + request.getUri());
-            PrintWriter printWriter = new PrintWriter(output);
+            File file = new File(OneHttpServer.WEB_ROOT + File.separator + request.getUri());
             BufferedReader reader = new BufferedReader(new FileReader(file));
 
             // print HTTP headers
@@ -68,7 +70,7 @@ public class OneResponse implements ServletResponse {
 
     @Override
     public PrintWriter getWriter() throws IOException {
-        return null;
+        return printWriter;
     }
 
     @Override

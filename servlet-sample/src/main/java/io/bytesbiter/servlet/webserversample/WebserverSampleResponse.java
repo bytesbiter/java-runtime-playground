@@ -17,7 +17,8 @@ public class WebserverSampleResponse {
     public void sendStaticResource() {
 
         try {
-            File file = new File(WebserverSampleHttpServer.WEB_ROOT + request.getUri());
+            File file = new File(WebserverSampleHttpServer.WEB_ROOT + File.separator
+                    + "servlet-sample/src/main/resources" + File.separator + request.getUri());
             PrintWriter printWriter = new PrintWriter(output);
             BufferedReader reader = new BufferedReader(new FileReader(file));
 

@@ -20,8 +20,16 @@ public class OneServlet implements Servlet {
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
         System.out.println("from service");
         PrintWriter out = servletResponse.getWriter();
-        out.println("Hello. Roses are red.");
-        out.print("Violets are blue.");
+        out.println("HTTP/1.1 200 OK \r\n" + "Content-Type: text/html \r\n\r\n" + "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "    <head>\n" +
+                "        <title>Servlet Title!</title>\n" +
+                "    </head>\n" +
+                "    <body>\n" +
+                "        <h1>My First Servlet Heading</h1>\n" +
+                "    </body>\n" +
+                "</html>\n");
+        out.flush();
     }
 
     @Override

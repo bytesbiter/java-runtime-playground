@@ -19,7 +19,7 @@ public class OneHttpServer {
      * The working directory is the location in the file system
      * from where the java command was invoked (where the JVM is running - which is the root directory of this project 'java-runtime-playgoround' ).
      */
-    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/resources";
+    public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator + "servlet-sample/src/main/java/io/bytesbiter/servlet/servletsampleone";
     private static final String SHUTDOWN_COMMAND = "/shutdown";
     private boolean shutdown = false;
 
@@ -47,16 +47,14 @@ public class OneHttpServer {
                 // create Response object
                 OneResponse response = new OneResponse(output);
                 response.setRequest(request);
-                response.sendStaticResource();
                 // check if this is a request for a servlet or
                 // a static resource
                 // a request for a servlet begins with "/servlet/"
                 if (request.getUri().startsWith("/servlet/")) {
                     OneServletProcessor processor = new OneServletProcessor();
                     processor.process(request, response);
-                }else {
-                    OneStaticResoureProcessor processor =
-                            new OneStaticResoureProcessor();
+                } else {
+                    OneStaticResoureProcessor processor = new OneStaticResoureProcessor();
                     processor.process(request, response);
                 }
                 // Close the socket
